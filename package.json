@@ -1,0 +1,19 @@
+{
+  "name": "weather-app-nodejs",
+  "version": "1.0.0",
+  "description": "weather-app-nodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErfanhanifezadeDeveloper/weather-app-NodeJS.git"
+  },
+  "author": "erfanhanifezade@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ErfanhanifezadeDeveloper/weather-app-NodeJS/issues"
+  },
+  "homepage": "https://github.com/ErfanhanifezadeDeveloper/weather-app-NodeJS#readme"
+}
