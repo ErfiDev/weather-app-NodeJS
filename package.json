@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ErfanhanifezadeDeveloper/weather-app-NodeJS#readme",
   "dependencies": {
-    "chalk": "^4.1.0"
+    "chalk": "^4.1.0",
+    "postman-request": "^2.88.1-postman.28"
   }
 }
