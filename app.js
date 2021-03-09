@@ -1,23 +1,11 @@
 const request = require("postman-request");
 const chalk = require("chalk");
+const getGeocode = require("./utils/geocode");
 
-function getGeocode(location)
-{
-    const urlMapBox = `https://api.mapbox.com/geocoding/v5/mapbox.places/${location}
-    .json?access_token=pk.eyJ1IjoiZXJmYW5oYW5pZmV6YWRlMTEiLCJhIjoiY2trY2N5YnU2MDg2dzJwcGl3MHQ4dmd1ayJ9.6Watree8ZLL8rLI8HO29cg`;
-
-    request({ url: urlMapBox } , (err , res)=>{
-        if(err){ console.log(chalk.red.bold(err.code)); }
-
-        else{
-            const response = JSON.parse(res.body);
-            const {features} = response;
-            const longi = features[0].center[0];
-            const lati = features[0].center[1];
-            getWeather(longi , lati);
-        }
-    });
-}
+getGeocode("karaj" , (err , res) => {
+    if(err) { console.log(chalk.red.bold(err)); }
+    else { getWeather(res[0] , res[1]); }
+});
 
 function getWeather(longi , lati)
 {
@@ -42,5 +30,3 @@ function getWeather(longi , lati)
         }
     });
 }
-
-getGeocode("karaj");
